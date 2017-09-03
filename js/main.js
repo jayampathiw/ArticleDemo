@@ -16,8 +16,6 @@
 
         var tweetObj = document.getElementsByClassName('tools');
         if (text != '') {
-            console.log(text.toString());
-
             for (var i = 0; i < tweetObj.length; i += 1) {
                 tweetObj[i].style.position = "absolute";
                 tweetObj[i].style.left = pageX + 5 + 'px';;
