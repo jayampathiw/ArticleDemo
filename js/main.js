@@ -5,8 +5,7 @@
         var text = '';
         var pageX = e.pageX;
         var pageY = e.pageY;
-        // text = (document.all) ? document.selection.createRange().text : document
-        //     .getSelection();
+
         if (window.getSelection) {
             text = window.getSelection();
         } else if (document.getSelection) {
@@ -38,6 +37,13 @@
     if (!document.all) {
         document.captureEvents(Event.MOUSEUP);
     }
+
+    document.getElementById("tweet").addEventListener("click", function(){
+        var tweetObj = document.getElementsByClassName('tools');
+        for (var i = 0; i < tweetObj.length; i += 1) {
+            tweetObj[i].style.display = 'none';
+        }
+    });
 })();
 
 
